@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Join Array Elements</title>
+</head>
+<body>
+
+    <h2>Join Array Elements into a String</h2>
+
+    <button onclick="joinArray()">Join Array</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+        function joinArray() {
+
+            let fruits = ["Apple", "Banana", "Mango", "Orange"];
+
+            let result = fruits.join("");
+
+            document.getElementById("result").innerHTML =
+                "Joined String: " + result;
+        }
+    </script>
+
+</body>
+</html>

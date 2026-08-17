@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arithmetic Operations</title>
+</head>
+<body>
+
+    <h2>Arithmetic Operations</h2>
+
+    <input type="number" id="num1" placeholder="Enter First Number"><br><br>
+
+    <input type="number" id="num2" placeholder="Enter Second Number"><br><br>
+
+    <button onclick="calculate()">Calculate</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+        function calculate() {
+            let num1 = Number(document.getElementById("num1").value);
+            let num2 = Number(document.getElementById("num2").value);
+
+            let add = num1 + num2;
+            let sub = num1 - num2;
+            let mul = num1 * num2;
+            let div = num2 != 0 ? num1 / num2 : "Division by zero is not possible";
+
+            document.getElementById("result").innerHTML =
+                "Addition: " + add + "<br>" +
+                "Subtraction: " + sub + "<br>" +
+                "Multiplication: " + mul + "<br>" +
+                "Division: " + div;
+        }
+    </script>
+
+</body>
+</html>

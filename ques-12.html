@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Check Array</title>
+</head>
+<body>
+
+    <h2>Check Whether Input is an Array</h2>
+
+    <button onclick="checkArray()">Check</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+        function checkArray() {
+
+            let input1 = ["Apple", "Banana", "Mango"];
+            let input2 = 100;
+
+            let output = "";
+
+            if (Array.isArray(input1)) {
+                output += "[\"Apple\", \"Banana\", \"Mango\"] is an Array.<br>";
+            } else {
+                output += "[\"Apple\", \"Banana\", \"Mango\"] is NOT an Array.<br>";
+            }
+
+            if (Array.isArray(input2)) {
+                output += "100 is an Array.";
+            } else {
+                output += "100 is NOT an Array.";
+            }
+
+            document.getElementById("result").innerHTML = output;
+        }
+    </script>
+
+</body>
+</html>

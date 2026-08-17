@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Current Date</title>
+</head>
+<body>
+
+    <h2>Display Current Date</h2>
+
+    <button onclick="showDate()">Show Date</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+        function showDate() {
+            let today = new Date();
+
+            let dd = String(today.getDate()).padStart(2, '0');
+            let mm = String(today.getMonth() + 1).padStart(2, '0');
+            let yyyy = today.getFullYear();
+
+            let months = ["January", "February", "March", "April", "May", "June",
+                          "July", "August", "September", "October", "November", "December"];
+
+            let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+            document.getElementById("result").innerHTML =
+                "mm-dd-yyyy : " + mm + "-" + dd + "-" + yyyy + "<br>" +
+                "mm/dd/yyyy : " + mm + "/" + dd + "/" + yyyy + "<br>" +
+                "dd-mm-yyyy : " + dd + "-" + mm + "-" + yyyy + "<br>" +
+                "dd/mm/yyyy : " + dd + "/" + mm + "/" + yyyy + "<br>" +
+                "yyyy Month dd Day : " + yyyy + " " + months[today.getMonth()] + " " + dd + " " + days[today.getDay()];
+        }
+    </script>
+
+</body>
+</html>

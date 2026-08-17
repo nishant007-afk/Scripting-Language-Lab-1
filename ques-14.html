@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sort Array</title>
+</head>
+<body>
+
+    <h2>Sort Items of an Array</h2>
+
+    <button onclick="sortArray()">Sort Array</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+        function sortArray() {
+
+            let arr1 = [3, 8, 7, 6, 5, -4, -3, 2, 1];
+
+            arr1.sort(function(a, b) {
+                return a - b;
+            });
+
+            document.getElementById("result").innerHTML =
+                "Sorted Array: " + arr1;
+        }
+    </script>
+
+</body>
+</html>
